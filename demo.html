@@ -1,0 +1,58 @@
+<!DOCTYPE html SYSTEM "http://www.maxiwebs.co.uk/dtd/xhtml1-transitional-maxiwebs-iui.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<meta http-equiv="Content-Encoding" content="gzip" />
+<meta http-equiv="Cache-Control" content="max-age=300" />
+<meta content="index,follow" name="robots" /> 
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="width" />
+</head>
+<body style="overflow:hidden;">
+<div style="position:absolute;width:85px;top:0;height:260px;background:url(http://ly.lygo.com/ly/search/img/logo-lycos-260x85.png) no-repeat;background-size:100% auto;" id="elasticdrop"></div>
+<div style="position:absolute;width:10px;left:150px;border:solid 1px #000;height:85px;background:#ccc url(http://ly.lygo.com/ly/search/img/logo-lycos-260x85.png) no-repeat;background-size:100% 100%;" id="bounceopen"></div>
+<div style="position:absolute;width:100px;top:200px;left:750px;border:solid 1px #000;height:85px;background:#ff3;" id="colorchange">Colors change</div>
+<div style="position:absolute;width:100px;top:0;right:100px;border:solid 1px #000;height:85px;background:#000;opacity:1.0;" id="fadeout">FADE OUT</div>
+<p id="letterspacing" style="letter-spacing:1px;text-align:center;font-weight:bold;">lycos animation framework letter spacing</p>
+<script src="lycos.animation.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var cb = function(){
+			alert('callback called after animation finished');
+			return false;
+		};
+
+
+	var openwbounce = new lycos.animation('bounceopen',{'property':'width','animateTo':'260px','duration':1000,'easing':'Elastic'}),
+	elasticdrop = new lycos.animation('elasticdrop',{'property':'top','animateTo':'500px','duration':1500,'easing':'Elastic'}),
+	fadeOut = new lycos.animation('fadeout',{'property':'opacity','animateTo':'0','duration':1000}),
+	colorchange = new lycos.animation('colorchange',{'property':'background','animateTo':'#ccc','duration':1000});
+	var letters = new lycos.animation('letterspacing',{'property':'letter-spacing','animateTo':'7px','duration':1000,'easing':'Elastic','callback':cb});
+
+	
+	openwbounce.start();
+	colorchange.start();
+	elasticdrop.start();
+	fadeOut.start();
+	letters.start();
+
+</script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

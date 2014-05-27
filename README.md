@@ -12,11 +12,6 @@ A small and simple javascript animation library I created when I worked at lycos
 
 /*
 
-	var cb = function(){
-		alert('callback called after animation finished');
-		return false;
-	};
-
 	var animation = new lycos.animation('<animation name>',{
 		'property':'<css property to animation>',
 		'animateTo':'n<px,ems,pt,%>',
@@ -31,8 +26,13 @@ A small and simple javascript animation library I created when I worked at lycos
 */
 
 
-var letters = new lycos.animation('letterspacing',{'property':'letter-spacing','animateTo':'7px','duration':1000,'easing':'Elastic','callback':cb});
+var cb = function(){
+	alert('callback called after animation finished');
+	return false;
+};
 
-letters.start();
+var letteranimation = new lycos.animation('letterspacing',{'property':'letter-spacing','animateTo':'7px','duration':1000,'easing':'Elastic','callback':cb});
+
+letteranimation.start();
 
 ```
